@@ -11,8 +11,8 @@ creds = Credentials.from_service_account_file("/etc/secrets/cred.json", scopes=s
 #creds = Credentials.from_service_account_file("cred.json", scopes=scopes)#local development
 client = gspread.authorize(creds)
 
-sheet_id=os.getenv("GOOGLE_SHEET_ID")
-#sheet_id = "1v21AGPdkgt_TAC9y9XfVI5Hztr2JXPn6KF9QXo53l50"
+#sheet_id=os.getenv("GOOGLE_SHEET_ID")
+sheet_id = "1v21AGPdkgt_TAC9y9XfVI5Hztr2JXPn6KF9QXo53l50"
 
 spreadsheet_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}"
 sheet = client.open_by_url(spreadsheet_url).sheet1
